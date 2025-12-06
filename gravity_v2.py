@@ -197,6 +197,7 @@ def draw_grid(window, camera, color, spacing, grid_range, y_plane=0):
 
             prev_point = (screen_x, screen_y)
 
+#* Planets (add your own here:)
 
 earth = Planet(
     mass=5.972e24, 
