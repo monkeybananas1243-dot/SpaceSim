@@ -1,0 +1,210 @@
+# Solar System /w black hole
+earth = Planet(
+    mass=5.972e24, 
+    size=6371000, 
+    x=WIDTH // 4+200, 
+    y=HEIGHT // 2,
+    z=0, 
+    color=(0, 255, 255)
+)
+earth.vy = 1.9
+earth.vz = 0.5
+
+sun = Planet(
+    mass=1.989e30,
+    size=695700000//10, 
+    x=HEIGHT//2, 
+    y=WIDTH//2,
+    z=0,
+    color=(255, 255, 0)
+)
+
+mars = Planet(
+    mass=6.39e23, 
+    size=3389500, 
+    x=WIDTH * 3 // 4+200, 
+    y=HEIGHT // 2,
+    z=0,
+    color=(255, 0, 0)
+)
+mars.vy = -1.9
+mars.vz = -0.2
+
+jupiter = Planet(
+    mass=1.899e27,
+    size=69911000//2, 
+    x=WIDTH // 4+200,
+    y=HEIGHT // 2+100,
+    z=0,
+    color=(176, 157, 95)
+)
+jupiter.vx = 1.09
+jupiter.vy = 1.5
+jupiter.vz = 0.0
+
+black_hole = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2-100,
+    z=-1000,
+    color=(0, 0, 0)
+)
+
+black_hole.vx = -0.09
+black_hole.vz = 0.8
+
+planets.append(earth)
+planets.append(sun)
+planets.append(mars)
+planets.append(jupiter)
+planets.append(black_hole)
+
+
+
+
+# Two black holes /w earth
+
+black_hole = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2-100,
+    z=-5000,
+    color=(0, 0, 0)
+)
+
+black_hole.vx = -0.09
+black_hole.vz = 0.8
+
+black_hole2 = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2-700,
+    z=-5000,
+    color=(0, 0, 0)
+)
+
+black_hole2.vx = -1.09
+black_hole2.vz = 2.9
+
+earth = Planet(
+    mass=5.972e24, 
+    size=6371000, 
+    x=WIDTH // 4+200, 
+    y=HEIGHT // 2,
+    z=-4000, 
+    color=(0, 255, 255)
+)
+earth.vy = 1.9
+earth.vz = 0.5
+
+planets.append(black_hole)
+planets.append(black_hole2)
+planets.append(earth)
+
+# Three black holes 
+
+earth = Planet(
+    mass=5.972e24, 
+    size=6371000, 
+    x=WIDTH//2, 
+    y=HEIGHT//2,
+    z=0, 
+    color=(0, 0, 255)
+)
+earth.vy = 1.9
+earth.vz = 0.5
+
+sun = Planet(
+    mass=1.989e30,
+    size=695700000, 
+    x=HEIGHT//2+1000, 
+    y=WIDTH//2,
+    z=0,
+    color=(255, 255, 0)
+)
+
+sun.vx = -1
+sun.vy = -1
+sun.vz = -1
+
+mars = Planet(
+    mass=6.39e23, 
+    size=3389500, 
+    x=WIDTH//4+300, 
+    y=HEIGHT // 2,
+    z=0,
+    color=(255, 0, 0)
+)
+mars.vx = -0.1
+mars.vy = 1.9
+mars.vz = -0.2
+
+jupiter = Planet(
+    mass=1.899e27,
+    size=69911000//2, 
+    x=WIDTH // 4+400,
+    y=HEIGHT // 2+400,
+    z=0,
+    color=(176, 157, 95)
+)
+jupiter.vx = -1.09
+jupiter.vy = 1.5
+jupiter.vz = 0.0
+
+black_hole = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2-100,
+    z=-1000,
+    color=(0, 0, 0)
+)
+
+black_hole.vx = -0.09
+black_hole.vz = 0.8
+
+black_hole2 = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2-700,
+    z=-1000,
+    color=(0, 0, 0)
+)
+
+black_hole2.vx = -1.09
+black_hole2.vz = 2.9
+
+black_hole3 = Planet(
+    mass=8.54e36//1_000_000,
+    size= 2.47e10//100_000,
+    x =WIDTH // 2,
+    y=HEIGHT // 2+700,
+    z=-1000,
+    color=(0, 0, 0)
+)
+
+black_hole3.vx = -1.09
+black_hole3.vz = 2.9
+
+earth = Planet(
+    mass=5.972e24, 
+    size=6371000, 
+    x=WIDTH // 4+200, 
+    y=HEIGHT // 2,
+    z=0, 
+    color=(0, 255, 255)
+)
+earth.vy = 1.9
+earth.vz = 0.5
+
+planets.append(black_hole)
+planets.append(black_hole2)
+planets.append(black_hole3)
+planets.append(mars)
+planets.append(jupiter)
+planets.append(sun)
+planets.append(earth)
