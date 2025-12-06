@@ -242,25 +242,12 @@ jupiter.vx = 1.09
 jupiter.vy = 1.5
 jupiter.vz = 0.0
 
-black_hole = Planet(
-    mass=8.54e36//1_000_000,
-    size= 2.47e10//100_000,
-    x =WIDTH // 2,
-    y=0,
-    z=-1000,
-    color=(0, 0, 0)
-)
-
-black_hole.vx = -0.09
-black_hole.vz = 0.8
-
 #* Remove planets here
 
 planets.append(earth)
 planets.append(sun)
 planets.append(mars)
 planets.append(jupiter)
-planets.append(black_hole)
 
 FPS = 60
 running = True
