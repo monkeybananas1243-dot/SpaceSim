@@ -1,4 +1,4 @@
-import pygame, math
+import pygame, math, pygame.gfxdraw
 
 pygame.init()
 
@@ -71,7 +71,7 @@ class Planet:
         self.net_fy = 0.0
         self.net_fz = 0.0
 
-        self.rect.center = (int(self.x), int(self.y))
+        self.rect_center = (int(self.x), int(self.y))
 
     def get_screen_coords(self, camera):
         x_view = self.x - camera.x
@@ -99,12 +99,23 @@ class Planet:
             if 0 < center_x < WIDTH and 0 < center_y < HEIGHT:
                 final_size = max(1, min(100, current_size))
                 
-                self.rect = pygame.draw.aacircle(
+                self.rect = pygame.gfxdraw.filled_circle(
                     WINDOW, 
-                    self.color, 
-                    (center_x, center_y), 
-                    final_size
+                    center_x, 
+                    center_y, 
+                    final_size,
+                    self.color
                 )
+
+                pygame.gfxdraw.aacircle(
+                    WINDOW, 
+                    center_x, 
+                    center_y, 
+                    final_size,
+                    self.color
+                )
+
+                self.rect_center = (center_x, center_y)
 
     def rotate(self, x, y, z, pitch, yaw):
         return rotate_point(x, y, z, pitch, yaw)
