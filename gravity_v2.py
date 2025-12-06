@@ -296,8 +296,6 @@ while running:
             CAMERA.pitch = max(-max_pitch, min(max_pitch, CAMERA.pitch))
 
             old_mouse_pos = new_mouse_pos
-            
-            print(dx, dy)
 
     keys = pygame.key.get_pressed()
     camera_speed = 10
