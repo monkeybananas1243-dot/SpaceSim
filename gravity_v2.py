@@ -254,6 +254,8 @@ black_hole = Planet(
 black_hole.vx = -0.09
 black_hole.vz = 0.8
 
+#* Remove planets here
+
 planets.append(earth)
 planets.append(sun)
 planets.append(mars)
